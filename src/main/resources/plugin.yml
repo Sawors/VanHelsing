@@ -4,3 +4,12 @@ main: com.github.sawors.vanhelsing.VanHelsing
 api-version: 1.17
 authors: [ Sawors ]
 website: www.github.com/sawors
+
+commands:
+  vampirism:
+    description: switch your role
+    usage: /<command>
+
+  vgive:
+    description: give command for Sawors' Van Helsing plugin
+    usage: /<command>
