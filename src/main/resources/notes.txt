@@ -1,0 +1,8 @@
+
+
+
+add custom durability system
+
+add way to remove handcuffs
+
+add actual vampires system

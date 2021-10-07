@@ -59,6 +59,18 @@ public class VgiveCommandExecutor implements CommandExecutor {
                     item.setItemMeta(meta);
                     break;
 
+                case "test":
+                    item.setType(Material.IRON_SWORD);
+                    meta.displayName(Component.text(ChatColor.GRAY + "s w ö r d e"));
+                    meta.setUnbreakable(false);
+                    meta.setLocalizedName("testsword");
+                    lore.add(Component.text(""));
+                    lore.add(Component.text(ChatColor.GREEN + "lmao"));
+                    meta.lore(lore);
+
+                    item.setItemMeta(meta);
+                    break;
+
 
             }
             if(args.length >= 2 && args[1] != null && Integer.parseInt(args[1]) >= 1){
