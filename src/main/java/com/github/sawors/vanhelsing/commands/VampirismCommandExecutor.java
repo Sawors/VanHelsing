@@ -1,6 +1,6 @@
 package com.github.sawors.vanhelsing.commands;
 
-import com.github.sawors.vanhelsing.DataHolder;
+import com.github.sawors.vanhelsing.tools.DataHolder;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

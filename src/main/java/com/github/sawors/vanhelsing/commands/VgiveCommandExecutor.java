@@ -1,6 +1,6 @@
 package com.github.sawors.vanhelsing.commands;
 
-import com.github.sawors.vanhelsing.DataHolder;
+import com.github.sawors.vanhelsing.tools.DataHolder;
 import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -50,10 +50,10 @@ public class VgiveCommandExecutor implements CommandExecutor {
                     item.setType(Material.IRON_NUGGET);
                     meta.displayName(Component.text(ChatColor.GRAY + "Handcuffs"));
                     meta.setUnbreakable(true);
-                    meta.setLocalizedName("handcuffsON");
+                    meta.setLocalizedName("handcuffs");
                     lore.add(Component.text(""));
                     lore.add(Component.text(ChatColor.GREEN + "Right Click at someone to prevent him from using items"));
-                    meta.getPersistentDataContainer().set(DataHolder.getImmovablekey(), PersistentDataType.INTEGER, 1);
+                    meta.getPersistentDataContainer().set(DataHolder.getImmovablekey(), PersistentDataType.INTEGER, 0);
                     meta.lore(lore);
 
                     item.setItemMeta(meta);

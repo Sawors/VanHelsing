@@ -1,5 +1,6 @@
-package com.github.sawors.vanhelsing;
+package com.github.sawors.vanhelsing.tools;
 
+import com.github.sawors.vanhelsing.VanHelsing;
 import org.bukkit.NamespacedKey;
 
 public class DataHolder {

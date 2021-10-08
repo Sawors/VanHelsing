@@ -13,3 +13,11 @@ commands:
   vgive:
     description: give command for Sawors' Van Helsing plugin
     usage: /<command>
+
+  handcuff:
+    description: handcuff a player (argument 1) or yourself (no argument)
+    usage: /<command>
+
+  uncuff:
+    description: uncuff a player (argument 1) or yourself (no argument)
+    usage: /<command>
