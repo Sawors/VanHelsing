@@ -1,17 +1,26 @@
 package com.github.sawors.vanhelsing.listenners;
 
 import com.github.sawors.vanhelsing.tools.UsefulThings;
+import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityToggleSwimEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Objects;
 
 public class ListenersAll implements Listener {
+
+    @EventHandler
+    public void on(EntityToggleSwimEvent event){
+        Bukkit.getServer().broadcast(Component.text("crawl"));
+
+        }
 
 
     @EventHandler

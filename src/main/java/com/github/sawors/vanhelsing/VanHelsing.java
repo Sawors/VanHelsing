@@ -7,13 +7,16 @@ import com.github.sawors.vanhelsing.commands.VgiveCommandExecutor;
 import com.github.sawors.vanhelsing.listenners.ForbiddenMoveItemListener;
 import com.github.sawors.vanhelsing.listenners.ListenersAll;
 import com.github.sawors.vanhelsing.listenners.PlayerMovementListener;
+import com.github.sawors.vanhelsing.runnables.MinuteCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.logging.Level;
 
 public final class VanHelsing extends JavaPlugin {
+
 
     @Override
     public void onEnable() {
@@ -29,6 +32,8 @@ public final class VanHelsing extends JavaPlugin {
         getServer().getPluginCommand("vgive").setExecutor(new VgiveCommandExecutor());
         getServer().getPluginCommand("handcuff").setExecutor(new HandcuffCommandExecutor());
         getServer().getPluginCommand("uncuff").setExecutor(new UncuffCommandExecutor());
+
+        BukkitTask task = new MinuteCheck(this).runTaskTimer(this, 20, 20);
 
     }
 

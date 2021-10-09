@@ -4,6 +4,7 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
+import org.bukkit.World;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.EquipmentSlot;
@@ -93,6 +94,14 @@ public class UsefulThings {
         } else{
             return Math.abs(Math.abs(victim.getLocation().getYaw()) - Math.abs(attacker.getLocation().getYaw())) <= range;
         }
+    }
+
+    public static int getWorldDay(World w){
+        return (int) Math.floor((double) (w.getFullTime()/24000));
+    }
+
+    public static boolean isPlayerCrawling(Player p){
+        return p.getEyeLocation().getY() - p.getLocation().getY() <= 0.5 && !p.isGliding() && !p.isInWater() && !p.isRiptiding() && !p.isFlying() && !p.isSleeping();
     }
 
 }
